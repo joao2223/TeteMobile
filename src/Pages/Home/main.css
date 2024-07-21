@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+
+:root {
+	--mainColor: #29335c;
+	--mainColorLight: #5767aa;
+	--secondaryColor: #db2b39;
+	--textColor: #eee;
+}
+.imagemFundo {
+	width: 100%;
+	height: auto;
+	display: block;
+	margin-top: 15rem;
+	padding: 0;
+  }
+.opcoesTexto {
+	text-decoration: underline;
+	margin: 1rem;
+}
+.containerDescricaoCorreioElegante {
+	display: flex;
+    flex-direction: column;
+    position: relative;
+	align-items: normal;
+    text-align: left;
+	bottom: 13rem;
+	right: 2rem;
+}
+
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+	padding: 0 2rem;
+	background-color: #1A03FF;
+	color: var(--textColor);
+	flex-direction: row-reverse;
+}
+
+nav a {
+	margin-right: 20px;
+	color: #fff;
+	text-decoration: underline;
+	font-size: 248pt; 
+	transform: scale(1.9, 3.04);
+}
+
+nav a:hover {
+	color: var(--secondaryColor);
+}
+
+header .nav-btn {
+	padding: 5px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: var(--textColor);
+	visibility: hidden;
+	opacity: 0;
+	font-size: 1.8rem;
+}
+
+header div,
+nav {
+	display: flex;
+	align-items: center;
+}
+
+.containerOpcoes {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+    bottom: 15rem;
+	text-align: left;
+    align-items: normal;
+}
+.opcoesTextoDois {
+	text-decoration: underline;
+	margin: 1rem;
+	font-size: 17px;
+}
+
+.containerSetas {
+	display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+@media only screen and (max-width: 1024px) {
+	header .nav-btn {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	header nav {
+		position: fixed;
+		top: -100vh;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color: #1A03FF;
+		transition: 1s;
+	}
+
+	header .responsive_nav {
+		transform: translateY(100vh);
+	}
+
+	nav .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+
+	nav .nav-back-btn {
+		position: absolute;
+		top: 21rem;
+        left: 2.5rem;
+	}
+	
+	nav .nav-back-btn-options {
+		bottom: 0;
+	}
+
+
+	nav a {
+		font-size: 1.5rem;
+	}
+}
